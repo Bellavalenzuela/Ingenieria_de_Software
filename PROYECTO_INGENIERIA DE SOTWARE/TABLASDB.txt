@@ -1,0 +1,75 @@
+TABLAS
+
+PARA PODER EMPLEAR LAS TABLAS ES NECESARIO INSTALAR LA DISTRIBUIDORA XAMPP 
+EN DONDE SE PUEDE UTILIZAR phpMyAdmin PARA LA BASE DE DATOS, TAMBIEN TENER PREVIAMENTE
+INSTALADO LOS PAQUETES NESARIOS PARA EMPLEAR EL LENGUAJE PHP.
+
+TABLA USUARIOS
+
+
+CREATE TABLE usuarios (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nombres VARCHAR(255) NOT NULL,
+    Apellidos VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    TipoUsuario ENUM('Productor', 'Comprador') NOT NULL,
+    Usuario VARCHAR(255) UNIQUE NOT NULL,
+    Clave VARCHAR(255) NOT NULL,
+    RClave VARCHAR(255) NOT NULL,
+    FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+TABLA CATEGORIAS
+
+CREATE TABLE categorias (
+    IdCategoria INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(255) NOT NULL
+);
+
+-- Insertar categorías principales
+INSERT INTO Categorias (Nombre) VALUES
+('Prendas de Vestir'),
+('Accesorios'),
+('Hogar'),
+('Hilos y Fibras'),
+('Productos Especiales');
+
+
+
+TABLA PRODUCTORES
+
+CREATE TABLE productores (
+    IdProductor INT AUTO_INCREMENT PRIMARY KEY,
+    Id INT,
+    Nombres VARCHAR(255) NOT NULL,
+    Apellidos VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Telefono VARCHAR(20),
+    Direccion VARCHAR(255),
+    Ciudad VARCHAR(255),
+    Pais VARCHAR(255),
+    FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (Id) REFERENCES Usuarios(Id)
+);
+
+
+TABLA PRODUCTOS
+
+CREATE TABLE productos (
+    IdProducto INT AUTO_INCREMENT PRIMARY KEY,
+    IdProductor INT,
+    Nombre VARCHAR(255) NOT NULL,
+    Descripcion TEXT,
+    Precio DECIMAL(10, 2),
+    Cantidad INT,
+    IdCategoria INT,
+    Foto VARCHAR(255), -- Nombre del archivo de la foto o ruta de la imagen
+    FechaAgregado TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Fecha en que se agregó el producto
+    FOREIGN KEY (IdProductor) REFERENCES Productores(IdProductor),
+    FOREIGN KEY (IdCategoria) REFERENCES Categorias(IdCategoria)
+);
+
+
+
+

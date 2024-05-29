@@ -1,0 +1,349 @@
+/* General styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #2dcb94;
+}
+
+a {
+    color: #4fa4ddd4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+/* Header */
+#header {
+    height: 60px;
+    transition: all 0.5s;
+    z-index: 997;
+    background: rgba(80, 225, 218, 0.804);
+    padding: 10px 0;
+    box-shadow: 0 2px 15px rgba(43, 216, 187, 0.823);
+}
+
+#header.header-scrolled, #header.header-inner-pages {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#header .logo h1 {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+}
+
+#header .logo img {
+    max-height: 65px;
+}
+
+#header .navbar {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+#header .navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+#header .navbar li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 10px 20px;
+}
+
+#header .navbar a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .navbar a:hover, #header .navbar .active > a, #header .navbar .active > a:focus, #header .navbar .active > a:hover {
+    color: #fff;
+    background: #111d24;
+}
+
+#header .bi-list {
+    font-size: 24px;
+    color: #fff;
+    display: none;
+}
+
+/* Section Background */
+#background {
+    text-align: center;
+    padding: 10px 0;
+    /*background: url('../Imagenes/Big1.png') top center;*/
+    position: relative;
+}
+
+
+#background .background-container {
+    position: relative;
+    z-index: 2;
+}
+
+#background h2 {
+    margin: 20px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#background .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #3498db;
+}
+
+#background .btn-get-started:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
+/* About Section */
+#about {
+    padding: 60px 0;
+}
+
+#about .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#about .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#about .section-title p {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #777;
+}
+
+/* Products Section */
+#products {
+    padding: 60px 0;
+}
+
+#products .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#products .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Footer */
+#footer {
+    background: #111;
+    padding: 30px 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+#footer .footer-top {
+    background: #222;
+    padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info img {
+    margin-bottom: 15px;
+}
+
+#footer .footer-top .footer-links h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+#footer .footer-top .footer-links ul li a {
+    color: #fff;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li a:hover {
+    color: #3498db;
+}
+
+#footer .footer-top .footer-contact p {
+    line-height: 26px;
+}
+
+#footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
+#footer .footer-newsletter h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#footer .footer-newsletter form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+    text-align: left;
+}
+
+#footer .footer-newsletter form input[type="email"] {
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 110px);
+}
+
+#footer .footer-newsletter form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px;
+    background: #3498db;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#footer .footer-newsletter form input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    #header .bi-list {
+        display: block;
+    }
+    #header .navbar ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+    }
+    #header .navbar ul.show {
+        display: block;
+    }
+    #header .navbar li {
+        padding: 10px 0;
+        margin: 0;
+        width: 100%;
+    }
+    #header .navbar a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #about .section-title p, #products .section-title p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #background h2 {
+        font-size: 24px;
+    }
+    #background .btn-get-started {
+        font-size: 14px;
+        padding: 8px 24px;
+    }
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-image {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-image img {
+    width: 100%;
+    display: block;
+}
